@@ -8,9 +8,11 @@ public class ProductService {
     // in actuality should be stored in a db
 
     List<Product> products = new ArrayList<>();
+    // ProductDB db = new ProductDB();
 
     public void addProduct(Product p){
         products.add(p); // have to pass the object
+        // db.save(p); // adds that product to the db directly
     }
 
     public List<Product> getAllProduct(){
