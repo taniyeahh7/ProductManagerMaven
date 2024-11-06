@@ -28,31 +28,31 @@ public class Main{
         service.addProduct(new Product("BlackBeast", "Computer", "White Table", 2020));
 
         // printing all the products
-        List<Product> products = service.getAllProduct();
+        // List<Product> products = service.getAllProduct();
         
-        // enhanced for loop
-        for(Product prod : products){
-            System.out.println(prod);
-        }
-        System.out.println("============================================================");
+        // // enhanced for loop
+        // for(Product prod : products){
+        //     System.out.println(prod);
+        // }
+        // System.out.println("============================================================");
 
-        // to print specific product
-        // eg want to check where is the logitech mouse
-        System.out.println("A partiular product: ");
-        Product p = service.getProduct("Logi Mouse");
-        System.out.println(p);
+        // // to print specific product
+        // // eg want to check where is the logitech mouse
+        // System.out.println("A partiular product: ");
+        // Product p = service.getProduct("Logi Mouse");
+        // System.out.println(p);
 
-        System.out.println("Out of warranty products: ");
-        List<Product> outWarrProd = service.getProductOutOfWarranty();
-        for(Product prod : outWarrProd){
-            System.out.println(prod);
-        }
+        // System.out.println("Out of warranty products: ");
+        // List<Product> outWarrProd = service.getProductOutOfWarranty();
+        // for(Product prod : outWarrProd){
+        //     System.out.println(prod);
+        // }
         
-        System.out.println("Black products: ");
-        List<Product> prods = service.getProductWithText("black");
-        for(Product prod : prods){
-            System.out.println(prod);
-        }
+        // System.out.println("Black products: ");
+        // List<Product> prods = service.getProductWithText("black");
+        // for(Product prod : prods){
+        //     System.out.println(prod);
+        // }
     }
 }
 
