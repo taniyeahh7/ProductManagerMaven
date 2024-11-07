@@ -14,10 +14,14 @@ public class ProductService {
         // products.add(p); // have to pass the object
         db.save(p); // adds that product to the db directly
     }
+    
 
     public List<Product> getAllProduct(){
-        return products;
+        return db.getAll();
+        // return products;
     }
+
+    
 
     public Product getProduct(String name){
         for(Product prod : products){

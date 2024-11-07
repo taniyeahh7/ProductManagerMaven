@@ -3,6 +3,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDB {
     Connection conn = null;
@@ -28,5 +30,10 @@ public class ProductDB {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public List<Product> getAll(){
+        List<Product> products = new ArrayList<>();
+        return products;
     }
 }
