@@ -4,6 +4,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.sql.ResultSet;
 import java.util.List;
 
 public class ProductDB {
@@ -34,6 +35,23 @@ public class ProductDB {
 
     public List<Product> getAll(){
         List<Product> products = new ArrayList<>();
+        String query = "select name, type, place, warranty from product";
+
+        try {
+            PreparedStatement st = conn.prepareStatement(query);
+            ResultSet rs = st.executeQuery();
+            while(rs.next()){
+                Product p = new Product();
+                p.setName(rs.getString(1)); // the numbers are the column indexes
+                p.setType(rs.getString(2));
+                p.setPlace(rs.getString(3));
+                p.setWarranty(rs.getInt(4));
+                products.add(p);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
         return products;
     }
 }
